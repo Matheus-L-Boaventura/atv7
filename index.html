@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculaTop</title>
+    <button>calculaTop</button>
     <style>
         div#calculadora{
             border: 1px solid black;
@@ -33,7 +33,7 @@
         const eN1 = divs[0];
         const eN2 = divs[1];
         const eResultado = divs[2];
-        const eCalcular = divs[3];
+        const eCalcular = document.querySelector("#calculadora > button");
         eCalcular.addEventListener('click', calcular);
 
         function calcular(){
@@ -44,6 +44,7 @@
         eResultado.textContent = soma;
         eResultado.style.color = 'red';
         }
+        
 
     </script>
     
