@@ -38,19 +38,47 @@
         const eResultado = divs[2];
         const buttons = document.querySelectorAll("#calculadora > button");
         const bSoma = buttons[0];
-        const bSubtracao = buttons[0];
-        const bMulplicacao = buttons[0];
-        const bDivisao = buttons[0];
-        eSoma.addEventListener('click', calcular);
+        const bSubtracao = buttons[1];
+        const bMultiplicacao = buttons[2];
+        const bDivisao = buttons[3];
 
-        function calcular(){
+        bSoma.addEventListener('click', somar);
+        bSubtracao.addEventListener('click', subtrair);
+        bMultiplicacao.addEventListener('click', multiplicar);
+        bDivisao.addEventListener('click', dividir);
+
+        function somar(){
 
         const n1 = Number(eN1.textContent);
         const n2 = Number(eN2.textContent);
-        const soma = n1 + n2;
-        eResultado.textContent = soma;
+        const somar = n1 + n2;
+        eResultado.textContent = somar;
         eResultado.style.color = 'red';
         }
+        function subtrair(){
+            const n1 = Number(eN1.textContent);
+            const n2 = Number(eN2.textContent);
+            const subtrair = n1 - n2;
+            eResultado.textContent = subtrair;
+            eResultado.style.color = 'blue';
+        }
+        function multiplicar(){
+            
+            const n1 = Number(eN1.textContent);
+            const n2 = Number(eN2.textContent);
+            const multiplicar = n1 * n2;
+            eResultado.textContent = multiplicar;
+            eResultado.style.color = 'green';
+        }
+        function dividir(){
+
+            const n1 = Number(eN1.textContent);
+            const n2 = Number(eN2.textContent);
+            const dividir = n1 / n2;
+            eResultado.textContent = dividir;
+            eResultado.style.color = 'black';
+        }
+
         
 
     </script>
